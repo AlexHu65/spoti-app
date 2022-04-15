@@ -1,0 +1,13 @@
+<div  class="container m-5 animated fadeIn">
+    <div  class="row fade show active d-flex justify-content-center align-items-center ">
+        <div *ngFor="let item of items" class="col m-2 d-flex justify-content-center align-items-center">
+            <div (click)="verArtista(item)" class="card puntero" style="width: 18rem;">
+                <img [src]="item.images | noimage" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{item.name}}</h5>
+                    <p class="card-text"><span *ngFor="let artist of item.artists" class="m-0 badge rounded-pill bg-primary">{{artist.name}}</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
